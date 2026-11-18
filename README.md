@@ -59,23 +59,20 @@ Users can submit content for review, view findings and request approval. Adminis
 BrandSentinel/
 │
 ├── frontend/
-│   ├── public/
 │   ├── src/
 │   │   ├── App.tsx
 │   │   ├── App.css
 │   │   ├── index.css
 │   │   └── main.tsx
-│   ├── package.json
-│   └── vite.config.ts
+│   
 │
 ├── backend/
 │   ├── main.py
 │   ├── requirements.txt
-│   └── .env.example
+│   
 │
-├── docs/
-│   ├── screenshots/
-│   └── project-description.md
+├── screenshots/
+│   
 │
 ├── .gitignore
 ├── README.md
@@ -208,11 +205,11 @@ Never publish passwords, secret keys, private user data or local database files 
 
 Detailed project description:
 
-`docs/project-description.md`
+`project-description.md`
 
 Application screenshots:
 
-`docs/screenshots/`
+`screenshots/`
 
 ## 14. Project Team
 
