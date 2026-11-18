@@ -1,0 +1,299 @@
+# BrandSentinel – Project Documentation
+
+## Explainable AI-Powered Brand Governance Platform
+
+**Tagline:** Review Before You Publish.
+
+---
+
+## 1. Introduction
+
+BrandSentinel is an AI-powered brand governance platform designed to review digital content before publication. It helps organizations identify potential brand guideline violations, unsupported promotional claims, risky expressions and inconsistent brand messaging.
+
+The platform combines rule-based content analysis with local AI-assisted analysis using Ollama. It provides understandable findings and recommendations to support better content decisions.
+
+## 2. Problem Statement
+
+Organizations publish marketing content through websites, advertisements, social media and other digital platforms.
+
+Manual content verification can be time-consuming and inconsistent. Content may contain unsupported claims, restricted words, misleading expressions or messaging that does not match the organization's brand identity.
+
+BrandSentinel addresses these challenges by providing a centralized content review and approval platform.
+
+## 3. Objectives
+
+- Automate preliminary content checking.
+- Identify potential brand guideline violations.
+- Detect potentially unsupported marketing claims.
+- Maintain consistent brand tone and messaging.
+- Provide explainable content review findings.
+- Simplify administrative approval workflows.
+- Maintain review history and user management.
+
+## 4. Proposed Solution
+
+BrandSentinel allows users to submit content for review against configured brand guidelines. The system identifies potential issues and provides explanations, severity levels and suggested corrections.
+
+Users can submit reviewed content for approval. Administrators can monitor submissions, manage users and approve or reject content.
+
+## 5. Main Modules
+
+### 5.1 User Authentication
+- Separate User and Admin login.
+- Role-based access.
+- Protected application sections.
+
+### 5.2 Content Review
+- Submit content for analysis.
+- Identify potential content issues.
+- Display evidence and explanations.
+- Show severity levels.
+- Provide suggested corrections.
+
+### 5.3 Brand Guidelines
+- Configure brand name.
+- Define preferred tone.
+- Add preferred words.
+- Specify restricted words.
+- Configure brand tagline.
+
+### 5.4 AI Integration
+- Local AI integration through Ollama.
+- Llama 3.2 (1B) model support.
+- Deeper AI-assisted content analysis.
+- Explainable recommendations.
+
+### 5.5 Approval Management
+- Submit reviewed content for approval.
+- Display pending approval requests.
+- Allow administrators to approve or reject submissions.
+- Maintain approval records.
+
+### 5.6 Admin Notifications
+- Notify administrators about new approval requests.
+- Display clickable notifications.
+- Open relevant approval requests.
+- Track notification read status.
+
+### 5.7 User Management
+- View registered users.
+- Edit user information.
+- Delete user accounts.
+- Protect administrative access.
+
+### 5.8 Review History
+- View previously reviewed content.
+- Track review findings.
+- Refresh saved review records.
+
+### 5.9 Dashboard
+- Display review statistics.
+- Show detected issues.
+- Display approval information.
+- Provide access to application modules.
+
+## 6. System Architecture
+
+BrandSentinel follows a frontend-backend architecture.
+
+**Frontend:** React and TypeScript provide the user interface.
+
+**Backend:** Python and FastAPI process requests, authentication, content reviews and approval workflows.
+
+**Database:** SQLite stores application records during development.
+
+**AI Engine:** Ollama runs the local language model for AI-assisted analysis.
+
+### System Workflow
+
+1. User logs in.
+2. User enters content.
+3. Backend receives the content.
+4. Content is checked against brand guidelines.
+5. AI-assisted analysis can provide additional findings.
+6. Findings and recommendations are displayed.
+7. User submits content for approval.
+8. Administrator receives a notification.
+9. Administrator approves or rejects the submission.
+10. Application records are maintained.
+
+## 7. Technology Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React |
+| Language | TypeScript |
+| Build Tool | Vite |
+| Backend | Python |
+| API Framework | FastAPI |
+| Database | SQLite |
+| AI Runtime | Ollama |
+| AI Model | Llama 3.2 (1B) |
+| Version Control | Git |
+| Repository Hosting | GitHub |
+
+## 8. Project Folder Structure
+
+```text
+BrandSentinel/
+│
+├── frontend/
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.tsx
+│
+├── backend/
+│   ├── main.py
+│   ├── requirements.txt
+│   
+│
+├── docs/
+│   ├── api-documentation.md
+│   └── screenshots/
+│
+├── .gitignore
+├── README.md
+└── LICENSE
+```
+
+Additional application files may be present.
+
+## 9. Installation Requirements
+
+Required software:
+
+- Python 3.10 or newer.
+- Node.js and npm.
+- Git.
+- Ollama for local AI analysis.
+
+### Backend Installation
+
+```cmd
+cd backend
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+Backend address:
+
+http://127.0.0.1:8000
+
+API documentation:
+
+http://127.0.0.1:8000/docs
+
+### Frontend Installation
+
+Open another CMD window:
+
+```cmd
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend address:
+
+http://localhost:5173
+
+### Ollama Installation
+
+Install Ollama from:
+
+https://ollama.com/
+
+Download the model:
+
+```cmd
+ollama pull llama3.2:1b
+```
+
+Ensure Ollama is running and the backend is configured with the correct model and service URL.
+
+## 10. User Workflow
+
+1. Open BrandSentinel.
+2. Log in using User credentials.
+3. Open Content Review.
+4. Enter the content to be checked.
+5. Review the detected issues.
+6. Read explanations and suggested corrections.
+7. Submit the content for administrative approval.
+8. Track the review and approval status.
+
+## 11. Administrator Workflow
+
+1. Log in using Admin credentials.
+2. View the Admin Dashboard.
+3. Open approval requests.
+4. Check submitted content and review findings.
+5. Approve or reject submissions.
+6. View approval notifications.
+7. Manage registered users.
+8. Review application history and statistics.
+
+## 12. Explainable AI
+
+BrandSentinel aims to make content analysis transparent by showing:
+
+- Potentially detected issue.
+- Supporting evidence.
+- Explanation of the issue.
+- Severity level.
+- Suggested correction.
+
+The system provides decision support and does not independently guarantee legal or regulatory compliance.
+
+## 13. Security Considerations
+
+- Use separate User and Admin access.
+- Protect administrator operations.
+- Store secrets in environment variables.
+- Do not upload passwords or API keys to GitHub.
+- Exclude local databases and private user data from public repositories.
+- Use secure authentication and HTTPS in production.
+
+## 14. Expected Outcomes
+
+- Reduce manual preliminary content review effort.
+- Improve consistency with brand guidelines.
+- Identify potentially unsupported promotional claims.
+- Improve transparency of content analysis.
+- Organize administrative approval workflows.
+- Maintain structured review records.
+
+## 15. Future Enhancements
+
+- Cloud hosting and deployment.
+- Multi-brand organization support.
+- Advanced analytics and reporting.
+- Content management system integration.
+- Additional AI models.
+- Scalable cloud database.
+- Automated marketing workflow integration.
+
+## 16. Project Team
+
+**Project Name:** BrandSentinel
+
+**Project Category:** Artificial Intelligence / Brand Governance
+
+**Team Members:**
+
+1. Kammineni Venkata Manasa – Team Leader, Frontend and Product Workflow.
+2. Gowreddy Supraja – Backend, AI and Data.
+
+## 17. Conclusion
+
+BrandSentinel aims to improve pre-publication brand governance through explainable content analysis, configurable brand guidelines, AI-assisted recommendations and structured administrative approval workflows.
+
+It helps organizations identify potential content risks before publication and supports more consistent brand communication.
+
+---
+
+**BrandSentinel – Review Before You Publish.**
